@@ -25,13 +25,13 @@ int main(void)
 				{
 					putchar(x);
 					putchar(y);
-					putchar(z);
+					putchar(y);
 					if ((x == 55) && (y == 56) && (z == 57))
 					{
 						putchar('\n');
 						return (0);
 					}
-					else 
+					else
 					{
 						putchar(',');
 						putchar(' ');
