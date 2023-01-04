@@ -1,30 +1,43 @@
 #include "main.h"
+/**
+ * is_square_root - Entry point
+ * Description - A function that confirms the natural
+ * square root of an input
+ * *@num: the function accepts an input saved into num
+ * *@squared: the function accepts an input saved into squared
+ * Return: Success (integer)
+ */
+int is_square_root(int num, int squared)
+{
+	if ((squared * squared) == num)
+	{
+		return (squared);
+	}
+	else if (squared == num / 2)
+	{
+		return (-1);
+	}
+	return (is_square_root(num, squared + 1));
+}
+
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: number to be used
- *
- * Return: the square root of n
+ * _sqrt_recursion - Entry point
+ * Description - A function that returns the
+ * natural square root of a number
+ * *@n: the function accepts an input saved into n
+ * Return: Success (integer)
  */
 int _sqrt_recursion(int n)
 {
-	if (n == 1 || n == 0)
-		return (n);
-	return (_sqrt(0, n));
-}
-
-/**
- * _sqrt - return the square root of a number
- * @n: test number
- * @x: squared number
- *
- * Return: the square root of n
- */
-int _sqrt(int n, int x)
-{
-	if (n > x / 2)
+	int squared = 0;
+	if (n < 0)
+	{
 		return (-1);
-	else if (n * n == x)
-		return (n);
-	return (_sqrt(n + 1, x));
+	}
+	else if (n == 1)
+	{
+		return (1);
+	}
+	return (is_square_root(n, squared));
 }
