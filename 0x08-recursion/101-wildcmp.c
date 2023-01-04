@@ -6,7 +6,6 @@
  *  * @after_wldcd: placeholder for position right after wildcard
  *   * Return: 1 if matched, 0 if not
  *    */
-
 int substring_match(char *s1, char *s2, char *after_wldcd)
 {
 	if (*s1 == '\0' && *s2 == '\0')
@@ -29,7 +28,6 @@ int substring_match(char *s1, char *s2, char *after_wldcd)
  *   * @s2: one string
  *    * Return: 1 if matched, 0 if not
  *     */
-
 int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
