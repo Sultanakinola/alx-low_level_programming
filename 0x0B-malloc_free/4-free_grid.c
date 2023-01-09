@@ -3,7 +3,7 @@
 /**
  * free_grid- frees 2D grid created by alloc_grid
  * @grid: douple pointer 3d grid
- * @grid: douple pointer 3d grid
+ * @height: height of grid
  */
 void free_grid(int **grid, int height)
 {
